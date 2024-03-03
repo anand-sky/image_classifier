@@ -1,0 +1,77 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                  Jersey_01.jpg  label:                     jersey
+ 3 key:                     Car_01.jpg  label:                        car
+ 4 key:                     Dog_02.jpg  label:                        dog
+
+     MATCH:
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               brittany spaniel
+
+                 Jersey_01.jpg: 
+Real:                     jersey   Classifier:                             ox
+
+                    Car_01.jpg: 
+Real:                        car   Classifier:           pickup, pickup truck
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: madagascar cat, ring-tailed lemur, lemur catta
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+
+     MATCH:
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               brittany spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                 Jersey_01.jpg: 
+Real:                     jersey   Classifier:                             ox  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Car_01.jpg: 
+Real:                        car   Classifier:           pickup, pickup truck  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: madagascar cat, ring-tailed lemur, lemur catta  
+PetLabelDog: 1  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images                      :   4
+N Dog Images                  :   2
+N of "Not a" Dog Images       :   2
+% correct Dogs                : 50.00
+% correct Breed               : 0.00
+% correct "Not a" Dog         : 100.00
+% match                       : 50.00
+
+INCORRECT Dog/NOT Dog Assignments:
+dog is-a-dog and madagascar cat, ring-tailed lemur, lemur catta as is-NOT-a-dog
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:               brittany spaniel
+
+** Total Elapsed Runtime: 00:00:00
